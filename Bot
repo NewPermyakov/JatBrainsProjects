@@ -1,0 +1,92 @@
+package com.company;
+
+import java.util.Scanner;
+
+public class JatBrainsProjects {
+    public static void main(String[] args) {
+
+/*
+            Scanner input = new Scanner(System.in);
+            String yourName;
+            String botName = "Aid";
+            int birthYear = 2021;
+            System.out.println("Hello! My name is " + botName);
+            System.out.println("I was created in " + birthYear);
+            System.out.println("Please, remind me your name: ");
+            yourName = input.nextLine();
+            System.out.println("What a great name you have, " + yourName + "!");
+
+ */
+
+        Scanner input = new Scanner(System.in);
+
+        String botName = "Aid";
+        final int birthYear = 2021;
+        final int varSecond = 2;
+        int userInput;
+        final int factor70 = 70;
+        final int factor21 = 21;
+        final int factor15 = 15;
+        final int factor105 = 105;
+
+        System.out.println("Hello! My name is " + botName + ".");
+        System.out.println("I was created in " + birthYear + ".");
+        System.out.println("Please, remind me your name: ");
+        System.out.print("> ");
+
+        String yourName = input.nextLine();
+        System.out.println("What a great name you have, " + yourName + "!");
+
+        System.out.println("Let me guess your age.");
+        System.out.println("Enter remainders of dividing your age by 3, 5 and 7, respectively.");
+
+        System.out.print("> ");
+        final float remainder3 = input.nextFloat();
+        System.out.print("> ");
+        final float remainder5 = input.nextFloat();
+        System.out.print("> ");
+        final float remainder7 = input.nextFloat();
+
+        var yourAge = (remainder3 * factor70 + remainder5 * factor21 + remainder7 * factor15) % factor105;
+
+        System.out.println("Your age is " + yourAge + " years, that's a good time to start programming!");
+
+        System.out.println("Now I will prove to you that I can count to any number you want.");
+        System.out.print("> ");
+
+        final int numberUser = input.nextInt();
+
+        for (int i = 0; i <= numberUser; i++) {
+            System.out.println(i + "!");
+        }
+
+        System.out.println("Let's test your programming knowledge.");
+        System.out.println("Why do we use methods?");
+
+        System.out.println("1. To repeat a statement multiple times.");
+        System.out.println("2. To decompose a program into several small subroutines.");
+        System.out.println("3. To determine the execution time of a program.");
+        System.out.println("4. To interrupt the execution of a program.");
+
+        for (int i = 0; i < 4; i++) {
+
+            System.out.print("> ");
+            userInput = input.nextInt();
+
+            if (userInput == varSecond) {
+                System.out.println("Congratulations, have a nice day!");
+                break;
+            }
+            if (userInput != varSecond && userInput > 0 && userInput < 5) {
+                System.out.println("Please, try again.");
+            }
+            if (userInput < 0 || userInput > 5 ) {
+                System.out.println("You entered an invalid value! Please, try again.");
+            }
+            if (i == 3) {
+                System.out.println("Ups, you guessed wrong! Sorry, but input attempt limit is elevated!");
+            }
+        }
+
+    }
+}
